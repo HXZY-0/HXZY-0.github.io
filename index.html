@@ -350,7 +350,7 @@
       border-radius: 24px;
       text-align: center;
       border: 4px solid #AE7645;
-      box-shadow: 0 20px 50px a(0,0,0,0.5);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
       max-width: 500px;
       width: 90%;
     }
@@ -475,33 +475,33 @@
 <script>
   // --- 核心数据配置 ---
   const TILE_IMAGES = {
-    '6': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/hesuan.png',
-    '5.H': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/dna.png',
-    '5.OH': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/rna.png',
-    '4.': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/heggansuan.png',
-    '3.H': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/tuoyanghetao.png',
-    '3.OH': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/hetao.png',
-    '2.H.P.A': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/a-tuoyang.png',
-    '2.H.P.T': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/t-tuoyang.png',
-    '2.H.P.C': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/c-tuoyang.png',
-    '2.H.P.G': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/g-tuoyang.png',
-    '2.OH.P.A': 'https://cdn.jsdelivr.net/gh/yourgithubid/img-a-he.png',
-    '2.OH.P.U': 'https://cdn.jsdelivr.net/gh/yourgithubid/img-u-he.png',
-    '2.OH.P.C': 'https://cdn.jsdelivr.net/gh/yourgithubid/img-c-he.png',
-    '2.OH.P.G': 'https://cdn.jsdelivr.net/gh/yourgithubid/img-g-he.png',
-    '1.H.P': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/tuoyang-gujia.png',
-    '1.OH.P': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/he-gujia.png',
-    '1.A': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/a.png',
-    '1.T': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/t.png',
-    '1.C': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/c.png',
-    '1.G': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/g.png',
-    '1.U': 'https://cdn.jsdelivr.net/gh/yourgithubid/img/u.png'
+    '6': 'https://i.imgur.com/4JzV4xY.png',
+    '5.H': 'https://i.imgur.com/7wH2LzQ.png',
+    '5.OH': 'https://i.imgur.com/3Zf9dXb.png',
+    '4.': 'https://i.imgur.com/8sKfGnL.png',
+    '3.H': 'https://i.imgur.com/9aRfCtX.png',
+    '3.OH': 'https://i.imgur.com/2dVmMbB.png',
+    '2.H.P.A': 'https://i.imgur.com/5Fb7sDp.png',
+    '2.H.P.T': 'https://i.imgur.com/6GcJhVz.png',
+    '2.H.P.C': 'https://i.imgur.com/1kJhLnF.png',
+    '2.H.P.G': 'https://i.imgur.com/0pRkDmQ.png',
+    '2.OH.P.A': 'https://i.imgur.com/AzXsBfN.png',
+    '2.OH.P.U': 'https://i.imgur.com/B7nFjLx.png',
+    '2.OH.P.C': 'https://i.imgur.com/C9sKmZr.png',
+    '2.OH.P.G': 'https://i.imgur.com/D3qRtJw.png',
+    '1.H.P': 'https://i.imgur.com/E5gFsVc.png',
+    '1.OH.P': 'https://i.imgur.com/F2cBnKm.png',
+    '1.A': 'https://i.imgur.com/G8dJxRs.png',
+    '1.T': 'https://i.imgur.com/H1nFkLz.png',
+    '1.C': 'https://i.imgur.com/I4sRtBv.png',
+    '1.G': 'https://i.imgur.com/J7pQdFx.png',
+    '1.U': 'https://i.imgur.com/K2nZmRc.png'
   };
 
   const TILE_NAMES = {
     '6': '核酸', '5.H': '脱氧核糖核酸', '5.OH': '核糖核酸', '4.': '核苷酸',
     '3.H': '脱氧核糖核苷酸', '3.OH': '核糖核苷酸',
-    '2.H.P.A': '腺嘌呤脱氧核糖核苷酸', '2.H.P.T': '胸腺嘧啶脱氧核糖核苷酸', '2.H.P.C': '胞嘧啶核糖核苷酸', '2.H.P.G': '鸟嘌呤核糖核苷酸',
+    '2.H.P.A': '腺嘌呤脱氧核糖核苷酸', '2.H.P.T': '胸腺嘧啶脱氧核糖核苷酸', '2.H.P.C': '胞嘧啶脱氧核糖核苷酸', '2.H.P.G': '鸟嘌呤脱氧核糖核苷酸',
     '2.OH.P.A': '腺嘌呤核糖核苷酸', '2.OH.P.U': '尿嘧啶核糖核苷酸', '2.OH.P.C': '胞嘧啶核糖核苷酸', '2.OH.P.G': '鸟嘌呤核糖核苷酸',
     '1.H.P': '脱氧核糖-磷酸骨架', '1.OH.P': '核糖-磷酸骨架',
     '1.A': '腺嘌呤', '1.T': '胸腺嘧啶', '1.C': '胞嘧啶', '1.G': '鸟嘌呤', '1.U': '尿嘧啶'
@@ -574,7 +574,7 @@
     for (let i = deck.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [deck[i], deck[j]] = [deck[j], deck[i]];
-    });
+    }
 
     // 发牌：每人 12 张
     playerHand = deck.splice(0, 12);
@@ -904,7 +904,7 @@
     const groupLeft = document.getElementById('group-left');
     const groupRight = document.getElementById('group-right');
 
-    // 容器切换逻辑
+    // 1. 容器切换逻辑
     if (cL >= 3) {
       // 显示中间大容器，隐藏两侧
       centerSlot.classList.add('active');
@@ -926,6 +926,7 @@
       groupLeft.classList.remove('hidden');
       groupRight.classList.remove('hidden');
 
+      // 逻辑：如果是配对出牌（等级相同且碱基配对），则切换到另一侧显示
       let useLeftSide = currentPlayerIndex <= 2;
       let isPairBeat = false;
       if (lastPlayedTile && cL === pL && cL >= 1 && cL <= 3) {
@@ -944,6 +945,7 @@
       const sub1Id = useLeftSide ? 'slot-L-sub1' : 'slot-R-sub1';
       const sub2Id = useLeftSide ? 'slot-L-sub2' : 'slot-R-sub2';
 
+      // 清空高亮和非对比侧内容
       ['slot-L-main', 'slot-L-sub1', 'slot-L-sub2', 'slot-R-main', 'slot-R-sub1', 'slot-R-sub2', 'slot-center-main'].forEach(id => {
         const s = document.getElementById(id);
         s.classList.remove('last-played');
@@ -964,6 +966,7 @@
         });
         mainSlot.innerHTML = createTileHTML(tile);
       } else {
+        // 如果是单张出牌，清空当前侧的小容器
         document.getElementById(sub1Id).innerHTML = '';
         document.getElementById(sub1Id).classList.remove('active');
         document.getElementById(sub2Id).innerHTML = '';
@@ -982,19 +985,19 @@
       hand.splice(idx, 1);
     });
     
-    // 更新记牌器
+    // 更新记牌器：只减去实际打出的牌（如果是合成，减去原料牌）
     updateCounter(removedTiles);
 
     lastPlayedTile = tile;
-    lastPlayerIndex = currentPlayerIndex;
-    passCount = 0;
+    lastPlayerIndex = currentPlayerIndex; // 记录谁出的牌
+    passCount = 0; // 有人出牌，重置跳过计数
     
     if (hand === playerHand) {
       selectedIndices = [];
-      sortHand(playerHand);
+      sortHand(playerHand); // 出牌后重新排序
       renderHand();
     } else {
-      sortHand(hand);
+      sortHand(hand); // AI出牌后也排序
       updateAICounts();
     }
 
@@ -1071,9 +1074,9 @@
   function nextTurn() {
     currentPlayerIndex = (currentPlayerIndex + 1) % 5;
     
-    // 如果连续 4 个人跳过，清空桌面
+    // 如果连续 4 个人跳过，说明回到了最后出牌的人
     if (passCount >= 4) {
-      executePass();
+      executePass(); // 清空桌面
       passCount = 0;
     }
 
@@ -1081,7 +1084,7 @@
     if (currentPlayerIndex !== 0) {
       setTimeout(aiTurn, 1500);
     } else {
-      renderHand();
+      renderHand(); // 轮到玩家时刷新手牌状态（检查按钮可用性）
     }
   }
 
@@ -1089,7 +1092,8 @@
     const aiIdx = currentPlayerIndex - 1;
     const hand = aiHands[aiIdx];
     
-    // AI 逻辑
+    // AI 逻辑：打出当前可以打出的 value 最小的牌
+    // 1. 尝试单张
     let playableTiles = [];
     hand.forEach((tile, index) => {
       if (!lastPlayedTile || canBeat(tile, lastPlayedTile)) {
@@ -1097,6 +1101,7 @@
       }
     });
 
+    // 2. 尝试组合 (如果当前没有压制牌，或者想出更小的)
     let playableCombos = [];
     for (let i = 0; i < hand.length; i++) {
       for (let j = i + 1; j < hand.length; j++) {
@@ -1112,13 +1117,16 @@
       }
     }
 
+    // 合并所有可选方案并按等级排序
     let allOptions = [
       ...playableTiles.map(o => ({ ...o, indices: [o.index] })),
       ...playableCombos
     ];
     
+    // 排序：优先出等级（level）最小的牌
     allOptions.sort((a, b) => a.level - b.level);
 
+    // 检查 AI 是否可以触发自动合成
     let autoComboOption = null;
     if (lastPlayedTile && TILE_LEVELS[lastPlayedTile] === 1) {
       const matchIdx = hand.findIndex(t => TILE_LEVELS[t] === 1 && canCombine(t, lastPlayedTile));
@@ -1138,4 +1146,52 @@
       nextTurn();
     } else if (allOptions.length > 0) {
       const best = allOptions[0];
-      showToast(`AI ${currentPlayerIndex}
+      showToast(`AI ${currentPlayerIndex} 打出：${TILE_NAMES[best.tile] || '合成产物'}`);
+      executePlay(best.tile, best.indices, hand);
+      nextTurn();
+    } else {
+      showToast(`AI ${currentPlayerIndex} 选择了跳过`);
+      passCount++;
+      nextTurn();
+    }
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    const counter = document.getElementById('tileCounter');
+    
+    // 动态计算位置：记牌器底部下方 20px 处
+    if (counter) {
+      const rect = counter.getBoundingClientRect();
+      const targetY = rect.bottom + 20; 
+      toast.style.top = `${targetY}px`;
+    }
+
+    toast.textContent = msg;
+    
+    // 动画效果：从目标位置轻微向下弹出
+    anime({
+      targets: toast,
+      translateY: [-20, 0],
+      opacity: [0, 1],
+      duration: 500,
+      easing: 'easeOutCubic',
+      complete: () => {
+        setTimeout(() => {
+          anime({ 
+            targets: toast, 
+            opacity: 0, 
+            translateY: 10,
+            duration: 400, 
+            easing: 'linear' 
+          });
+        }, 1800);
+      }
+    });
+  }
+
+  init();
+</script>
+
+</body>
+</html>
